@@ -1,5 +1,5 @@
 
-Bank Churn Analysis Project
+# Bank Churn Analysis Project
 
 Customer churn is a very common problem in financial institute whenever banks and other financial institutes wants to  prevent losing active customers. A good prediction model can save a bank millions of dollars annually to retain the customers and growth.
 
