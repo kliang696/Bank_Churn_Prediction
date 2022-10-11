@@ -18,10 +18,10 @@ Machine learning algorithms can be implemented to forecast the likelihood of cli
 
 | Phase                                                      |  Status     |
 |------------------------------------------------------------|-------------|
-| Framing the Problem in your head and setup a github repo   |🟢Compelted|
-| Data Exploration                                           |🟢Not Started|
-| Data Cleaning                                              |🟡Not Started|
-| Feature Enginearing                                        |🟡Not Started|
-| Training the model                                         |🟡Not Started|
-| Evaluating the model                                       |🟡Not Started|
+| Framing the Problem in your head and setup a github repo   |🟢 Compelted |
+| Data Exploration                                           |🟢 Compelted |
+| Data Cleaning                                              |🟢 Compelted |
+| Feature Enginearing                                        |🟢 Compelted |
+| Training the model                                         |🟢 Compelted |
+| Evaluating the model                                       |🟡In Progress|
 | Launching the model as a Web App                           |🟡Not Started|
