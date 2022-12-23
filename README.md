@@ -8,7 +8,7 @@ The credit card customer data contains information on approximately 10,000 indiv
 One notable aspect of this dataset is that it is imbalanced, with only 16% of customers having cancelled their credit cards. This can make it challenging to train a model to accurately predict customer turnover, as the model may be biased towards the majority class of customers who have not cancelled their credit cards. As a result, care should be taken when using this dataset to train machine learning models.
 ## Project Objectives 
 - What is the best model to predict and prevent Chun?
-- What are the most influential features that have most impact on the churn?
+- What are the most influential features that impact on the churn?
 - What metrics are the most suitable to evaluate model?
 - What is the financial benefit of using a model to prevent churn?
 - Deploy the model using Python Flask for real-time prediction
