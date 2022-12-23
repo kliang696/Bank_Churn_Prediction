@@ -54,7 +54,7 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
     <img src="Plots/EDA/num12.png">
     
      * Use a heatmap to identify the top 5 features that are most correlated with the target variable.
-       * Heat maps can be used to visualize the relationship between two variables, with the strength of the relationship indicated by the intensity of the color.
+       * Heat maps can be helpful to visualize the relationship between two variables, with the strength of the relationship indicated by the intensity of the color.
        <img src="Plots/EDA/heat.png">
       * The top 5 numerical features that correlated with target are:
         *  Total_Trans_Ct
