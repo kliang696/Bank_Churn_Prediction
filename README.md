@@ -44,8 +44,8 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
 ----------
 4. __Numerical Data__
     * Plot histograms of numerical data to detect outliers.
-    <img src="Plots/EDA/num.png">
-    <img src="Plots/EDA/num1.png">
+    <img src="Plots/EDA/num11.png">
+    <img src="Plots/EDA/num12.png">
     
 ----------
     
