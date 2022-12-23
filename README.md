@@ -59,7 +59,7 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
  
  
 6. __EDA Takeaways:__
-    * ___We found that this dataset is imbalanced, with a majority of observations belonging to label 0 and a minority belonging to label. This can cause problems when building a model, as it may be biased towards predicting the majority class and not perform well on the minority class. To address this issue, we will use a technique called random oversampling to balance the data and improve model performance.___
+    * ___We found that this dataset is imbalanced, with a majority of observations belonging to label 0 and a minority belonging to label 1. This can cause problems when building a model, as it may be biased towards predicting the majority class and not perform well on the minority class. To address this issue, we will use a technique called random oversampling to balance the data and improve model performance.___
     * ___Having no missing values or outliers in this dataset can be beneficial for machine learning because it means the data is relatively clean and free from issues that can distort model performance.___
     * ___The top 5 features that correlated with target are:___
         *  __Total_Trans_Ct__
