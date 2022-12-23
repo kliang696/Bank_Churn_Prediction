@@ -53,6 +53,16 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
     <img src="Plots/EDA/num11.png">
     <img src="Plots/EDA/num12.png">
     
+     * Use a heatmap to identify the top 5 features that are most correlated with the target variable.
+       * Heat maps can be used to visualize the relationship between two variables, with the strength of the relationship indicated by the intensity of the color.
+       <img src="Plots/EDA/heat.png">
+      * The top 5 numerical features that correlated with target are:
+        *  Total_Trans_Ct
+        *  Total_Ct_Chng_Q4_Q1
+        *  Total_Revolving_Bal
+        *  Contacts_Count_12_mon
+        *  Avg_Utilization_Ratio
+    
 ----------
     
  
@@ -61,9 +71,7 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
       * Creating new features, or feature engineering, can help to improve the performance of a machine learning model by providing additional information for the model to learn from.In this case, by dividing the total revolving balance by the total number of relationships, we can get a sense of the average revolving balance per relationship and how it compares to the overall revolving balance. This new feature could potentially provide valuable insights into the customer's credit habits and financial behavior.
    * One-hot encode the "Marriage_Status" column to create new columns "Is_Married", "Is_Single", and "Unknown".
       * Since the "marry_status" feature is a nominal variable and cannot be ordered, we will use one-hot encoding to transform it into three separate columns: "is_married," "is_single," and "is_unknown." If a customer is married, the "is_married" column will be set to 1, while the other two columns will be set to 0. This indicates that the customer is married and not single or unknown.
-    * Use a heatmap to identify the top 5 features that are most correlated with the target variable.
-      * Heat maps can be used to visualize the relationship between two variables, with the strength of the relationship indicated by the intensity of the color.
-    <img src="Plots/EDA/heat.png">
+   
  ----------
  
  
