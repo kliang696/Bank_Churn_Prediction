@@ -25,7 +25,7 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
 
 
 
-## Exploratory data analysis(EDA) brief summary
+## Exploratory data analysis(EDA) Brief Summary
 1. __Used frequency table and bar plot to assess the balance of the data, ensuring that all categories of the target variable are equally represented.__
     *   The target variable in this dataset is "Attrition_Flag," which indicates whether a customer has left or stayed with the company. There are 8500 existing customers and 1627 customers who have left, or "attrited,".In addition, this dataset is imbalanced, with 83.93% existing customers and only 16.04% new customers. This can make it difficult for the model to accurately learn and predict patterns, as the minority class is underrepresented.
     *  <img src="Plots/EDA/Screen Shot 2022-12-22 at 23.08.37.png" width=500 height=150>
