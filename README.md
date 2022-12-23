@@ -69,8 +69,11 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
 5. __Feature Engineering__
     * Create a new feature called "Revolving_Bal_Per_Relationship" by dividing "Total_Revolving_Bal" by "Total_Relationship_Count".
       * Creating new features, or feature engineering, can help to improve the performance of a machine learning model by providing additional information for the model to learn from.In this case, by dividing the total revolving balance by the total number of relationships, we can get a sense of the average revolving balance per relationship and how it compares to the overall revolving balance. This new feature could potentially provide valuable insights into the customer's credit habits and financial behavior.
+      
+      <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.30.05.png">
    * One-hot encode the "Marital_Status" column to create new columns "Is_Married", "Is_Single", and "Unknown".
       * Since the "marry_status" feature is a nominal variable and cannot be ordered, we will use one-hot encoding to transform it into three separate columns: "is_married," "is_single," and "is_unknown." If a customer is married, the "is_married" column will be set to 1, while the other two columns will be set to 0. This indicates that the customer is married and not single or unknown.
+           <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.22.52.png" width=450 height=100>
    
  ----------
  
