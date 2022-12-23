@@ -26,19 +26,25 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
 
 
 ## Exploratory data analysis(EDA) brief summary
-1. __Used a bar plot to assess the balance of the data, ensuring that all categories of the target variable are equally represented.__
-<img src="Plots/EDA/data balance.png" width=500 height=300>
+1. __Used frequency table and bar plot to assess the balance of the data, ensuring that all categories of the target variable are equally represented.__
+    *   The target variable in this dataset is "Attrition_Flag," which indicates whether a customer has left or stayed with the company. There are 8500 existing customers and 1627 customers who have left, or "attrited,".In addition, this dataset is imbalanced, with 83.93% existing customers and only 16.04% new customers. This can make it difficult for the model to accurately learn and predict patterns, as the minority class is underrepresented.
+    *  <img src="Plots/EDA/Screen Shot 2022-12-22 at 23.08.37.png" width=500 height=150>
+    *  <img src="Plots/EDA/data balance.png" width=500 height=300>
+    
 
 ----------
 
 2. __Used a frequency table to find the sum of missing values__
-<img src="Plots/EDA/null.png" alt="From the frequncy table above, we didn't detect any null values in this dataset"> 
+     *   The frequency table indicates that there are no missing or null values in this dataset. This is beneficial for the model because missing or null values can introduce noise and bias into the data, which can negatively impact the model's performance. By having a complete and clean dataset, the model will be able to learn more accurately and make more reliable predictions
+     *   <img src="Plots/EDA/null.png" alt="From the frequncy table above, we didn't detect any null values in this dataset"> 
 
 
 ----------
 3. __Catergorical Data__
-    * Convert categorical data to numerical data and plot the distribution.
-    <img src="Plots/EDA/Cat.png">
+    * For the categorical data, we convert binary features to 0 and 1. For example, we map "Existing Customer" to 0 and "Attrited Customer" to 1, and so on, and  For ordinal features that can be ordered, we assign values from 0 to 5 based on their order. For example, for card categories, the lowest level is "blue," so we assign it a value of 0, and "silver" is assigned a value of 1, "gold" is assigned a value of 2, and "platinum" is assigned a value of 3, and so on. For nominal features, which cannot be ordered, we will use one-hot encoding to transform them into separate columns in the feature engineering phase.
+    
+    * The plot indicates that customers with an income less than $40,000 and a "blue" level card category have the highest churn rates. This makes sense, as individuals with lower income and lower level card status may be more likely to churn. These factors should be taken into consideration in future efforts to reduce churn.
+    * <img src="Plots/EDA/Cat.png">
     
     
 ----------
@@ -52,7 +58,8 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
  
 5. __Feature Engineering__
     * Create a new feature called "Revolving_Bal_Per_Relationship" by dividing "Total_Revolving_Bal" by "Total_Relationship_Count".
-    * One-hot encode the "Marriage_Status" column to create new columns "Is_Married", "Is_Single", and "Unknown".
+   * One-hot encode the "Marriage_Status" column to create new columns "Is_Married", "Is_Single", and "Unknown".
+      * Since the "marry_status" feature is a nominal variable and cannot be ordered, we will use one-hot encoding to transform it into three separate columns: "is_married," "is_single," and "is_unknown." If a customer is married, the "is_married" column will be set to 1, while the other two columns will be set to 0. This indicates that the customer is married and not single or unknown.
     * Use a heatmap to identify the top 5 features that are most correlated with the target variable.
     <img src="Plots/EDA/heat.png">
  ----------
