@@ -28,27 +28,27 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
 ## Exploratory Data Analysis and Feature Enginerring Brief Summary
 1. __Used frequency table and bar plot to assess the balance of the data, ensuring that all categories of the target variable are equally represented.__
     *   The target variable in this dataset is "Attrition_Flag," which indicates whether a customer has left or stayed with the company. There are 8500 existing customers and 1627 customers who have left, or "attrited,".In addition, this dataset is imbalanced, with 83.93% existing customers and only 16.04% new customers. This can make it difficult for the model to accurately learn and predict patterns, as the minority class is underrepresented.
-    *  <img src="Plots/EDA/Screen Shot 2022-12-22 at 23.08.37.png" width=500 height=150>
-    *  <img src="Plots/EDA/data balance.png" width=500 height=300>
+      * <img src="Plots/EDA/Screen Shot 2022-12-22 at 23.08.37.png" width=500 height=150>
+      <img src="Plots/EDA/data balance.png" width=500 height=300>
     
 
 ----------
 
 2. __Used a frequency table to find the sum of missing values__
      *   The frequency table indicates that there are no missing or null values in this dataset. This is beneficial for the model because missing or null values can introduce noise and bias into the data, which can negatively impact the model's performance. By having a complete and clean dataset, the model will be able to learn more accurately and make more reliable predictions
-     *   <img src="Plots/EDA/null.png" alt="From the frequncy table above, we didn't detect any null values in this dataset"> 
+        <img src="Plots/EDA/null.png" alt="From the frequncy table above, we didn't detect any null values in this dataset"> 
 
 
 ----------
 3. __Catergorical Data__
     * For the categorical data, we convert binary features to 0 and 1. For example, we map "Existing Customer" to 0 and "Attrited Customer" to 1, and so on, and  For ordinal features that can be ordered, we assign values from 0 to 5 based on their order. For example, for card categories, the lowest level is "blue," so we assign it a value of 0, and "silver" is assigned a value of 1, "gold" is assigned a value of 2, and so on. For nominal features, which cannot be ordered, we will use one-hot encoding to transform them into separate columns in the feature engineering phase.
     
-    * <img src="Plots/EDA/Cat.png">
+     <img src="Plots/EDA/Cat.png">
     
     
 ----------
 4. __Numerical Data__
-    * Plot histograms of numerical data to detect outliers.
+    * Plot histograms of numerical data to detect outliers.From the histogram below, we did not find major outliers, which suggests that they are unlikely to have a big impact our model.
     <img src="Plots/EDA/num.png">
     
      * Use a heatmap to identify the top 5 features that are most correlated with the target variable.
@@ -71,13 +71,13 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
       <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.30.05.png">
    * One-hot encode the "Marital_Status" column to create new columns "Is_Married", "Is_Single", and "Unknown".
       * Since the "marry_status" feature is a nominal variable and cannot be ordered, we will use one-hot encoding to transform it into three separate columns: "is_married," "is_single," and "is_unknown." If a customer is married, the "is_married" column will be set to 1, while the other two columns will be set to 0. 
-           <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.22.52.png" width=450 height=100>
+       <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.22.52.png" width=450 height=100>
    
  ----------
  
  
 6. __EDA Takeaways:__
-    * ___We found that this dataset is imbalanced, with a majority of observations belonging to label 0 and a minority belonging to label 1. This can cause problems when building a model, as it may be biased towards predicting the majority class and not perform well on the minority class. ___
+    * ___We found that this dataset is imbalanced, with a majority of observations belonging to label 0 and a minority belonging to label 1. This can cause problems when building a model, as it may be biased towards predicting the majority class and not perform well on the minority class.___
     * ___Having no missing values or major outliers in this dataset can be beneficial for machine learning because it means the data is relatively clean and free from issues that can distort model performance.___
     * ___The top 5 features that correlated with target are:___
         *  __Total_Trans_Ct__
