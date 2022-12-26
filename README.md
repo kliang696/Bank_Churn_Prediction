@@ -93,7 +93,16 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 <img src="Plots/EDA/ROS.png">
 
 
+## Evaluation metrics explian
+- AP
+- ROC
+- Recall
 
+## Model Performance comparsion with imbalanced data
+## Model Performance comparsion with balanced data(ROS)
+## Hyper parameter tunning for XG boost 
+## Cross Validation
+## Feature importance
 
 
 
