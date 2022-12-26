@@ -50,11 +50,11 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
 ----------
 4. __Numerical Data__
     * Plot histograms of numerical data to detect outliers.
-    <img src="Plots/EDA/num11.png">
+    <img src="Plots/EDA/num.png">
     
      * Use a heatmap to identify the top 5 features that are most correlated with the target variable.
        * Heat maps can be helpful to visualize the relationship between two variables, with the strength of the relationship indicated by the intensity of the color.
-       <img src="Plots/EDA/heat.png">
+       <img src="Plots/EDA/heat1.png">
       * The top 5 numerical features that correlated with target are:
         *  Total_Trans_Ct
         *  Total_Ct_Chng_Q4_Q1
