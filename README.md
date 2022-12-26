@@ -87,6 +87,14 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
         *  __Avg_Utilization_Ratio__
 
 
+## Data Over Sampling
+Random over-sampling is a technique that is used to balance an imbalanced dataset by generating new synthetic samples from the minority class,which can help the model learn more about the minority class and make more accurate predictions. 
+
+<img src="Plots/EDA/ROS.png">
+
+
+
+
 
 
 
