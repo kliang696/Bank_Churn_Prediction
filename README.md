@@ -126,7 +126,7 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 | ------------- | ------------- | ------------- |------------- | ------------- |
 | XG   Boost| 0.94  | 0.87  | 0.95  | 0.99  |
 ## Feature importance
-
+<img src="Plots/EDA/Shap.png">
 
 
 
