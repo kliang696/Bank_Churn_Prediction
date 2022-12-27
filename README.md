@@ -99,9 +99,10 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 ## Model Performance with imbalanced & balanced data(ROS)
 - For the model performance, we use Recall, F1, PR AUC, ROC AUC as our main metrics. As this is dataset is imbalanced, we will put more emphasize on Recall, F1 and PR because the TN is not being included in the calculation.  
+- The table below shows that the model's performance has significantly improved when using balanced data. The XG Boost classifier outperformed the other two models in this comparison.
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;__Model trained with imbalanced Data__
-| Model (Imbalanced Data) | Recall| F1| PR AUC| ROC AUC|
+| Model  | Recall| F1| PR AUC| ROC AUC|
 | ------------- | ------------- | ------------- |------------- | ------------- |
 | Logistic Regression| 0.50  | 0.59  | 0.65  | 0.88 |
 | Random Forest| 0.57  | 0.69  | 0.85  | 0.96  |
@@ -116,6 +117,11 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 
 ## Hyper parameter Tunning & Cross Validation For XG boost 
+- Based on the comparison, we have chosen the XG Boost classifier as our primary model. To further improve performance, we will conduct hyperparameter tuning for the XG Boost model to identify the optimal combination of parameters.
+
+<img src="Plots/EDA/Screen Shot 2022-12-27 at 02.25.31.png" width=500 height=250>
+
+&emsp;&emsp;&emsp;__Retrain the model using best parameters__
 | Model  | Recall| F1| PR AUC| ROC AUC|
 | ------------- | ------------- | ------------- |------------- | ------------- |
 | XG   Boost| 0.94  | 0.87  | 0.95  | 0.99  |
