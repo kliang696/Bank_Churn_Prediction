@@ -98,15 +98,17 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
   * <img src="Plots/EDA/cm.jpeg" width=300 height=150>
 
 ## Model Performance with imbalanced & balanced data(ROS)
+- For the data performance, we use Recall, F1, PR AUC, ROC AUC as our main metrics. 
 
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Model trained with imbalanced Data
 | Model (Imbalanced Data) | Recall| F1| PR AUC| ROC AUC|
 | ------------- | ------------- | ------------- |------------- | ------------- |
 | Logistic Regression| 0.50  | 0.59  | 0.65  | 0.88 |
 | Random Forest| 0.57  | 0.69  | 0.85  | 0.96  |
 | XG Boost|0.70  | 0.79  | 0.90  | 0.97 |
 
-
-| Model (Balanced Data) | Recall| F1| PR AUC| ROC AUC|
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Model trained with balanced Data
+| Model  | Recall| F1| PR AUC| ROC AUC|
 | ------------- | ------------- | ------------- |------------- | ------------- |
 | Logistic Regression| 0.81  | 0.60  | 0.69  | 0.90  |
 | Random Forest| 0.89  | 0.77  | 0.89  | 0.97  |
