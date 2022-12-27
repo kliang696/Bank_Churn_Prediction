@@ -98,16 +98,16 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
   * <img src="Plots/EDA/cm.jpeg" width=300 height=150>
 
 ## Model Performance with imbalanced & balanced data(ROS)
-- For the data performance, we use Recall, F1, PR AUC, ROC AUC as our main metrics. 
+- For the model performance, we use Recall, F1, PR AUC, ROC AUC as our main metrics. As this is dataset is imbalanced, we will put more emphasize on Recall, F1 and PR because the TN is not being included in the calculation.  
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Model trained with imbalanced Data
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;__Model trained with imbalanced Data__
 | Model (Imbalanced Data) | Recall| F1| PR AUC| ROC AUC|
 | ------------- | ------------- | ------------- |------------- | ------------- |
 | Logistic Regression| 0.50  | 0.59  | 0.65  | 0.88 |
 | Random Forest| 0.57  | 0.69  | 0.85  | 0.96  |
 | XG Boost|0.70  | 0.79  | 0.90  | 0.97 |
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Model trained with balanced Data
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;__Model trained with balanced Data__
 | Model  | Recall| F1| PR AUC| ROC AUC|
 | ------------- | ------------- | ------------- |------------- | ------------- |
 | Logistic Regression| 0.81  | 0.60  | 0.69  | 0.90  |
@@ -118,7 +118,7 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 ## Hyper parameter Tunning & Cross Validation For XG boost 
 | Model  | Recall| F1| PR AUC| ROC AUC|
 | ------------- | ------------- | ------------- |------------- | ------------- |
-| XG   Boost| Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+| XG   Boost| 0.94  | 0.87  | 0.95  | 0.99  |
 ## Feature importance
 
 
