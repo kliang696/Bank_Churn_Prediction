@@ -28,8 +28,13 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
 ## Exploratory Data Analysis and Feature Enginerring Brief Summary
 1. __Used frequency table and bar plot to assess the balance of the data, ensuring that all categories of the target variable are equally represented.__
     *   The target variable in this dataset is "Attrition_Flag," which indicates whether a customer has left or stayed with the company. There are 8500 existing customers and 1627 customers who have left, or "attrited,".In addition, this dataset is imbalanced, with 83.93% existing customers and only 16.04% new customers. This can make it difficult for the model to accurately learn and predict patterns, as the minority class is underrepresented.
-      * <img src="Plots/EDA/Screen Shot 2022-12-22 at 23.08.37.png" width=500 height=150>
-      <img src="Plots/EDA/data balance.png" width=400 height=250>
+    <p align="center">
+       <img src="Plots/EDA/Screen Shot 2022-12-22 at 23.08.37.png" width=500 height=150>
+   </p >
+       
+    <p align="center">
+      <img src="Plots/EDA/data balance.png" width=400 height=250> 
+      </p>
     
 
 ----------
@@ -71,7 +76,8 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
       <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.30.05.png">
    * One-hot encode the "Marital_Status" column to create new columns "Is_Married", "Is_Single", and "Unknown".
       * Since the "marry_status" feature is a nominal variable and cannot be ordered, we will use one-hot encoding to transform it into three separate columns: "is_married," "is_single," and "is_unknown." If a customer is married, the "is_married" column will be set to 1, while the other two columns will be set to 0. 
-       <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.22.52.png" width=450 height=100>
+      <p align="center">
+       <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.22.52.png" width=450 height=100></p>
    
  ----------
  
@@ -89,24 +95,33 @@ One notable aspect of this dataset is that it is imbalanced, with only 16% of cu
 
 ## Data Over Sampling
 Random over-sampling is a technique that is used to balance an imbalanced dataset by generating new synthetic samples from the minority class,which can help the model learn more about the minority class and make more accurate predictions. 
-
-<img src="Plots/EDA/ROS.png" width=250 height=250>
+<p align="center">
+<img src="Plots/EDA/ROS.png" width=250 height=250> </p>
 
 
 ## Evaluation Metrics 
 - In this churn problem, our goal is to minimize the customer who actually left bank but the model fails to detect(FN). This is because a failure to detect a customer who has actually left (FN) can result in the bank losing money, while a false alarm (FP) does not have the same issue. Therefore, we will prioritize __recall__ over precision. 
-  * <img src="Plots/EDA/cm.jpeg" width=300 height=150>
+   <p align="center">
+  <img src="Plots/EDA/cm.jpeg" width=300 height=150>. </p>
 
 ## Model Performance with imbalanced & balanced data(ROS)
 - For the model performance, we use Recall, F1, PR AUC, ROC AUC as our main metrics. As this is dataset is imbalanced, we will put more emphasize on Recall, F1 and PR because the TN is not being included in the calculation.  
 - The table below shows that the model's performance has significantly improved when using balanced data. The XG Boost classifier outperformed the other two models in this comparison.
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;__Model trained with imbalanced Data__
+
+
+
 | Model  | Recall| F1| PR AUC| ROC AUC|
 | ------------- | ------------- | ------------- |------------- | ------------- |
 | Logistic Regression| 0.50  | 0.59  | 0.65  | 0.88 |
 | Random Forest| 0.57  | 0.69  | 0.85  | 0.96  |
 | XG Boost|0.70  | 0.79  | 0.90  | 0.97 |
+
+</div>
+
+
+
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;__Model trained with balanced Data__
 | Model  | Recall| F1| PR AUC| ROC AUC|
@@ -118,8 +133,8 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 ## Hyper parameter Tunning & Cross Validation For XG boost 
 - Based on the comparison, we have chosen the XG Boost classifier as our primary model. To further improve performance, we will conduct hyperparameter tuning for the XG Boost model to identify the optimal combination of parameters.
-
-<img src="Plots/EDA/Screen Shot 2022-12-27 at 02.25.31.png" width=500 height=250>
+<p align="center">
+<img src="Plots/EDA/Screen Shot 2022-12-27 at 02.25.31.png" width=500 height=250> </p>
 
 - To obtain the best results from hyperparameter tuning, we retrained the XGBoost model using the optimal hyperparameters. We then used 5-fold cross-validation to evaluate the model's performance and took the average of the validation scores as the final measure of the model's performance.
 
@@ -131,15 +146,17 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 <img src="Plots/EDA/pr.png" >
 <img src="Plots/EDA/roc.png">
 
-## Dollar Value Evaluation
+
 
 ## Feature importance
 - In this section, we used SHAP values to identify the most influential features in the model. We selected the top 5 features based on their SHAP values and included them in the model. This allowed us to evaluate the importance of each feature and determine which ones had the greatest impact on the model's performance.
-<img src="Plots/EDA/Shap.png">
+<p align="center">
+<img src="Plots/EDA/Shap.png"> </p>
 
 ## Deployment
 - In this part of the process, we will use the top 5 most influential features identified by SHAP values to build a XG Boost model. We will then deploy this model using Python Flask to allow for real-time prediction. This will enable us to quickly and efficiently make predictions using the model in a live setting.
-<img src="Plots/EDA/Screen Shot 2022-12-27 at 20.53.31.png" width=400 height=500>
+<p align="center">
+<img src="Plots/EDA/Screen Shot 2022-12-27 at 20.53.31.png" width=400 height=500> </p>
 
 
 
