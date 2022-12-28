@@ -121,11 +121,18 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 <img src="Plots/EDA/Screen Shot 2022-12-27 at 02.25.31.png" width=500 height=250>
 
+- To obtain the best results from hyperparameter tuning, we retrained the XGBoost model using the optimal hyperparameters. We then used 5-fold cross-validation to evaluate the model's performance and took the average of the validation scores as the final measure of the model's performance.
+
+
 &emsp;&emsp;&emsp;__Retrain the model using best parameters__
 | Model  | Recall| F1| PR AUC| ROC AUC|
 | ------------- | ------------- | ------------- |------------- | ------------- |
 | XG   Boost| 0.94  | 0.87  | 0.95  | 0.99  |
+<img src="Plots/EDA/pr.png" >
+<img src="Plots/EDA/roc.png">
+
 ## Feature importance
+- In this section, we used SHAP values to identify the most influential features in the model. We selected the top 5 features based on their SHAP values and included them in the model. This allowed us to evaluate the importance of each feature and determine which ones had the greatest impact on the model's performance.
 <img src="Plots/EDA/Shap.png">
 
 
