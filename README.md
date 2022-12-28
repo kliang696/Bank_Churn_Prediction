@@ -131,9 +131,17 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 <img src="Plots/EDA/pr.png" >
 <img src="Plots/EDA/roc.png">
 
+## Dollar Value Evaluation
+
 ## Feature importance
 - In this section, we used SHAP values to identify the most influential features in the model. We selected the top 5 features based on their SHAP values and included them in the model. This allowed us to evaluate the importance of each feature and determine which ones had the greatest impact on the model's performance.
 <img src="Plots/EDA/Shap.png">
+
+## Deployment
+- In this part of the process, we will use the top 5 most influential features identified by SHAP values to build a XG Boost model. We will then deploy this model using Python Flask to allow for real-time prediction. This will enable us to quickly and efficiently make predictions using the model in a live setting.
+<img src="Plots/EDA/Screen Shot 2022-12-27 at 20.53.31.png" width=400 height=500>
+
+
 
 
 
