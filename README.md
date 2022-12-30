@@ -42,6 +42,7 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
       </p>
     
 
+
 ----------
 
 2. __Using a frequency table to find the sum of missing values__
@@ -113,27 +114,8 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 - For the model performance, we use Recall, F1, PR AUC, ROC AUC as our main metrics. As this is dataset is imbalanced, we will put more emphasize on Recall, F1 and PR because the TN is not being included in the calculation.  
 - The table below shows that the model's performance has significantly improved when using balanced data. The XG Boost classifier outperformed the other two models in this comparison.
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;__Model trained with imbalanced Data__
-
-
-
-| Model  | Recall| F1| PR AUC| ROC AUC|
-| ------------- | ------------- | ------------- |------------- | ------------- |
-| Logistic Regression| 0.50  | 0.59  | 0.65  | 0.88 |
-| Random Forest| 0.57  | 0.69  | 0.85  | 0.96  |
-| XG Boost|0.70  | 0.79  | 0.90  | 0.97 |
-
-</div>
-
-
-
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;__Model trained with balanced Data__
-| Model  | Recall| F1| PR AUC| ROC AUC|
-| ------------- | ------------- | ------------- |------------- | ------------- |
-| Logistic Regression| 0.81  | 0.60  | 0.69  | 0.90  |
-| Random Forest| 0.89  | 0.77  | 0.89  | 0.97  |
-| XG   Boost| 0.92  |  0.79 | 0.90  | 0.98  |
+<p align="center">
+<img width="517" alt="Screen Shot 2022-12-30 at 02 30 58" src="https://user-images.githubusercontent.com/89816441/210045716-cad7d973-2656-4852-8d5d-105a82b612c9.png"> </p>
 
 
 ## Hyper parameter Tunning & Cross Validation For XG boost 
@@ -143,11 +125,9 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 - To obtain the best results from hyperparameter tuning, we retrained the XGBoost model using the optimal hyperparameters. We then used 5-fold cross-validation to evaluate the model's performance and took the average of the validation scores as the final measure of the model's performance.
 
+<p align="center">
+<img width="428" alt="Screen Shot 2022-12-30 at 02 33 06" src="https://user-images.githubusercontent.com/89816441/210045875-7d6188df-ef59-4e83-837a-0d11a2dd56c6.png"></p>
 
-&emsp;&emsp;&emsp;__Retrain the model using best parameters__
-| Model  | Recall| F1| PR AUC| ROC AUC|
-| ------------- | ------------- | ------------- |------------- | ------------- |
-| XG   Boost| 0.94  | 0.87  | 0.95  | 0.99  |
 <img src="Plots/EDA/pr.png" >
 <img src="Plots/EDA/roc.png">
 
