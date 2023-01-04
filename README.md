@@ -109,7 +109,7 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
    <p align="center">
   <img src="Plots/EDA/cm.jpeg" width=300 height=150>. </p>
 
-## Model Performance with imbalanced & balanced data(ROS)
+## Model Performance with imbalanced & balanced data
 - For the model performance, we use Recall, F1, PR AUC, ROC AUC as our main metrics. As this is dataset is imbalanced, we will put more emphasize on Recall, F1 and PR because the TN is not being included in the calculation.  
 - The table below shows that the model's performance has significantly improved when using balanced data. The XG Boost classifier outperformed the other two models in this comparison.
 
