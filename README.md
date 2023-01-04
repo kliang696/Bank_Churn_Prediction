@@ -32,7 +32,7 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
 
 ## Exploratory Data Analysis and Feature Enginerring Brief Summary
 1. __Using frequency table and bar plot to assess the balance of the data, ensuring that all categories of the target variable are equally represented.__
-    *   The target variable in this dataset is "Attrition_Flag," which indicates whether a customer has left (`1`) or stayed with the company (`0`). There are 8,500 existing customers and 1,627 customers who have left, or "attrited,". In addition, this dataset is imbalanced, with the churning rate of 16%. This can make it difficult for the model to accurately learn and predict the patterns in the data, as the minority class is underrepresented.
+    *   The target variable in this dataset is ```Attrition_Flag```, which indicates whether a customer has left (`1`) or stayed with the company (`0`). There are 8,500 existing customers and 1,627 customers who have left, or "attrited,". In addition, this dataset is imbalanced, with the churning rate of 16%. This can make it difficult for the model to accurately learn and predict the patterns in the data, as the minority class is underrepresented.
     <p align="center">
        <img src="Plots/EDA/Screen Shot 2022-12-22 at 23.08.37.png" width=500 height=150>
    </p >
@@ -52,7 +52,7 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
 
 ----------
 3. __Catergorical Data__
-    * For the categorical data, we convert binary features to 0 and 1. For example, we map "Existing Customer" to 0 and "Attrited Customer" to 1, and so on, and  For ordinal features that can be ordered, we assign values from 0 to 5 based on their order. For example, for card categories, the lowest level is "blue," so we assign it a value of 0, and "silver" is assigned a value of 1, "gold" is assigned a value of 2, and so on. For nominal features, which cannot be ordered, we will use one-hot encoding to transform them into separate columns in the feature engineering phase.
+    * For the categorical data, we convert binary features to 0 and 1. For example, we map ```Existing Customer``` to 0 and ```Attrited Customer``` to 1, and so on, and  For ordinal features that can be ordered, we assign values from 0 to 5 based on their order. For example, for card categories, the lowest level is "blue," so we assign it a value of 0, and "silver" is assigned a value of 1, "gold" is assigned a value of 2, and so on. For nominal features, which cannot be ordered, we will use one-hot encoding to transform them into separate columns in the feature engineering phase.
     
      <img src="Plots/EDA/Cat.png">
     
@@ -66,21 +66,20 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
        * Heat maps can be helpful to visualize the relationship between two variables, with the strength of the relationship indicated by the intensity of the color.
        <img src="Plots/EDA/heat1.png">
       * The top 5 numerical features that correlated with target are:
-        *  Total_Trans_Ct
-        *  Total_Ct_Chng_Q4_Q1
-        *  Total_Revolving_Bal
-        *  Contacts_Count_12_mon
-        *  Avg_Utilization_Ratio
+        *  ```Total_Trans_Ct```
+        *  ```Total_Ct_Chng_Q4_Q1```
+        *  ```Total_Revolving_Bal```
+        *  ```Contacts_Count_12_mon```
+        *  ```Avg_Utilization_Ratio```
     
 ----------
     
  
 5. __Feature Engineering__
-    * Create a new feature called "Revolving_Bal_Per_Relationship" by dividing "Total_Revolving_Bal" by "Total_Relationship_Count".
+    * Create a new feature called ```Revolving_Bal_Per_Relationship = Total_Revolving_Bal / Total_Relationship_Count```
       * Creating new features, can help to improve the performance of a machine learning model by providing additional information for the model to learn from.In this case, by dividing the total revolving balance by the total number of relationships, we can get a sense of the average revolving balance per relationship and how it compares to the overall revolving balance. 
       
-      <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.30.05.png">
-   * One-hot encode the "Marital_Status" column to create new columns "Is_Married", "Is_Single", and "Unknown".
+   * One-hot encode the ```Marital_Status``` column to create new columns ```Is_Married```, ```Is_Single```, and ```Unknown```.
       * Since the "marry_status" feature is a nominal variable and cannot be ordered, we will use one-hot encoding to transform it into three separate columns: "is_married," "is_single," and "is_unknown." If a customer is married, the "is_married" column will be set to 1, while the other two columns will be set to 0. 
       <p align="center">
        <img src="Plots/EDA/Screen Shot 2022-12-23 at 02.22.52.png" width=450 height=100></p>
@@ -92,11 +91,11 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
     * ___We found that this dataset is imbalanced, with a majority of observations belonging to label 0 and a minority belonging to label 1. This can cause problems when building a model, as it may be biased towards predicting the majority class and not perform well on the minority class.___
     * ___Having no missing values or major outliers in this dataset can be beneficial for machine learning because it means the data is relatively clean and free from issues that can distort model performance.___
     * ___The top 5 features that correlated with target are:___
-        *  __Total_Trans_Ct__
-        *  __Total_Ct_Chng_Q4_Q1__
-        *  __Total_Revolving_Bal__
-        *  __Contacts_Count_12_mon__
-        *  __Avg_Utilization_Ratio__
+        *  ```Total_Trans_Ct```
+        *  ```Total_Ct_Chng_Q4_Q1```
+        *  ```Total_Revolving_Bal```
+        *  ```Contacts_Count_12_mon```
+        *  ```Avg_Utilization_Ratio```
 
 
 ## Data Over Sampling
