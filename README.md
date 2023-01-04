@@ -119,8 +119,13 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 ## Hyper parameter Tunning & Cross Validation For XG boost 
 - Based on the comparison, we have chosen the XG Boost classifier as our primary model. To further improve performance, we will conduct hyperparameter tuning for the XG Boost model to identify the optimal combination of parameters.
-<p align="center">
-<img src="Plots/EDA/Screen Shot 2022-12-27 at 02.25.31.png" width=500 height=250> </p>
+
+```
+param_grid = {'max_depth': [3, 4, 5],
+              'learning_rate': [0.01, 0.02, 0.03],
+              'n_estimators': [100, 130, 150]} 
+```
+
 
 - To obtain the best results from hyperparameter tuning, we retrained the XGBoost model using the optimal hyperparameters. We then used 5-fold cross-validation to evaluate the model's performance and took the average of the validation scores as the final measure of the model's performance.
 
