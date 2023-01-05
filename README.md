@@ -143,8 +143,9 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 <img src="Plots/EDA/Shap.png"> </p>
 
 ## Dollar Value Evaluation
-<p align="center">
-<img width="596" alt="Screen Shot 2023-01-03 at 23 14 03" src="https://user-images.githubusercontent.com/89816441/210483365-50f67cdf-7780-473b-b1a1-264dbc7d6e57.png"> </p>
+<p align="center"><img width="587" alt="Screen Shot 2023-01-04 at 23 07 51" src="https://user-images.githubusercontent.com/89816441/210699843-f462204d-aeba-4609-b2c1-90b7d9090a2b.png">
+
+ </p>
 
 
 ## Deployment
