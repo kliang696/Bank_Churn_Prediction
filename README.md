@@ -1,6 +1,8 @@
 # Bank Churn Prediction
 Bank churn, or the loss of customers to other financial institutions, is a significant problem for banks because it can lead to a decline in revenue and profitability.Building a prediction model can help identify at-risk customers and prevent churn by taking targeted interventions to improve the customer experience. Ultimately, building a prediction model to prevent churn can help improve customer loyalty, increase revenue, and reduce the financial impact of customer loss.
 
+[![web link](https://img.shields.io/badge/code_link-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/kliang696/Bank_Churn_Prediction/blob/main/bank_churn_prediction.ipynb)
+
 
 <img src="Plots/EDA/payroll-ge74d913c9_1920.jpg" width=700 height=400>
 
@@ -143,6 +145,8 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 <img src="Plots/EDA/Shap.png"> </p>
 
 ## Dollar Value Evaluation
+- This table illustrates the potential savings for the bank using different threshold levels for the model's churn prediction. 
+The first column thresh means the cutoff that model will predict range from 0.1 to 0.9. The second column 'dollar value 11' represents a correct prediction, where the model accurately predicts that a customer will churn and how much money can be saved totally. If the model accurately predicts that a customer will churn, the bank can take steps to try to retain that customer and prevent them from leaving. Retaining a customer can be more cost-effective for the bank than acquiring a new customer, as it can be expensive to attract new customers through marketing. The second column labeled 'dollar value 10' represents the model fails to predict that a customer churn but they actually does churn, which resulting in a loss for the bank. The third column 'review counts'  represents the number of customers that the model predicts will churn. The cost of labor to review these positive cases varies based on the number of review counts, and the bank must decide which threshold level is the most suitable for the business. 
 <p align="center"><img width="587" alt="Screen Shot 2023-01-04 at 23 07 51" src="https://user-images.githubusercontent.com/89816441/210699843-f462204d-aeba-4609-b2c1-90b7d9090a2b.png">
 
  </p>
@@ -152,6 +156,8 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 - In this part of the process, we will use the top 5 most influential features identified by `SHAP` values to build a `XG-Boost` model. We will then deploy this model using Python `Flask` to allow for real-time prediction for the new customers. This will enable us to quickly and efficiently make predictions using the model in a live setting.
 <p align="center">
 <img src="Plots/EDA/Screen Shot 2022-12-27 at 20.53.31.png" width=400 height=500> </p>
+
+## Conclusion
 
 
 
