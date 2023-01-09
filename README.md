@@ -21,17 +21,17 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
 
 ## Project Structure
 
-- Exploratory Data Analysis & Feature Engineering
-- Modelling & Performance Evaluation
-- Model Performance Improvement(Hyper Parameter Tuning & Cross Validation)
-- Feature Importance
-- Dollar value Evaluation
-- Deployment
-- Conclusion
+- [Exploratory Data Analysis & Feature Engineering](#exploratory-data-analysis-and-feature-enginerring)
+- [Modelling & Performance Evaluation](#model-performance-evaluation)
+- [Model Performance Improvement](#model-performance-improvement)
+- [Feature Importance](#feature-importance)
+- [Dollar value Evaluation](#dollar-value-evaluation)
+- [Deployment](#deployment)
+- [Conclusion](#conclusion)
 
 
 
-## Exploratory Data Analysis and Feature Enginerring Brief Summary
+## Exploratory Data Analysis and Feature Enginerring 
 1. __Using frequency table and bar plot to assess the balance of the data, ensuring that all categories of the target variable are equally represented.__
     *   The target variable in this dataset is ```Attrition_Flag```, which indicates whether a customer has left (`1`) or stayed with the company (`0`). There are 8,500 existing customers and 1,627 customers who have left, or "attrited,". In addition, this dataset is imbalanced, with the churning rate of 16%. This can make it difficult for the model to accurately learn and predict the patterns in the data, as the minority class is underrepresented.
     
@@ -114,7 +114,7 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
    <p align="center">
   <img src="Plots/EDA/cm.jpeg" width=300 height=150>. </p>
 
-## Model Performance with imbalanced & balanced data
+## Model Performance Evaluation
 - For the model performance, we use Recall, F1, PR AUC, ROC AUC as our main metrics. As this is dataset is imbalanced, we will put more emphasize on Recall, F1 and PR because the TN is not being included in the calculation.  
 - The table below shows that the model's performance has significantly improved when using balanced data. The XG Boost classifier outperformed the other two models in this comparison.
 
@@ -122,7 +122,7 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 <img width="517" alt="Screen Shot 2022-12-30 at 02 30 58" src="https://user-images.githubusercontent.com/89816441/210045716-cad7d973-2656-4852-8d5d-105a82b612c9.png"> </p>
 
 
-## Hyper parameter Tunning & Cross Validation For XG boost 
+## Model Performance Improvement
 - Based on the comparison, we have chosen the XG Boost classifier as our primary model. To further improve performance, we will conduct hyperparameter tuning for the XG Boost model to identify the optimal combination of parameters.
 
 ```python
