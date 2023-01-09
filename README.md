@@ -35,6 +35,8 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
 ## Exploratory Data Analysis and Feature Enginerring Brief Summary
 1. __Using frequency table and bar plot to assess the balance of the data, ensuring that all categories of the target variable are equally represented.__
     *   The target variable in this dataset is ```Attrition_Flag```, which indicates whether a customer has left (`1`) or stayed with the company (`0`). There are 8,500 existing customers and 1,627 customers who have left, or "attrited,". In addition, this dataset is imbalanced, with the churning rate of 16%. This can make it difficult for the model to accurately learn and predict the patterns in the data, as the minority class is underrepresented.
+    
+    
     <p align="center">
        <img src="Plots/EDA/Screen Shot 2022-12-22 at 23.08.37.png" width=500 height=150>
    </p >
@@ -42,6 +44,8 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
     <p align="center">
       <img src="Plots/EDA/data balance.png" width=400 height=250> 
       </p>
+   
+   
     
 
 
@@ -131,11 +135,18 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 - To obtain the best results from hyperparameter tuning, we retrained the XGBoost model using the optimal hyperparameters. We then used 5-fold cross-validation to evaluate the model's performance and took the average of the validation scores as the final measure of the model's performance.
 
+
+
+
+
+
+
+<table><tr>
 <p align="center">
 <img width="428" alt="Screen Shot 2022-12-30 at 02 33 06" src="https://user-images.githubusercontent.com/89816441/210045875-7d6188df-ef59-4e83-837a-0d11a2dd56c6.png"></p>
-
-<img src="Plots/EDA/pr.png" >
+<td><img src="Plots/EDA/pr.png" >
 <img src="Plots/EDA/roc.png">
+</tr></table>
 
 
 
@@ -169,8 +180,11 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 ## Deployment
 - In this part of the process, we will use the top 5 most influential features identified by `SHAP` values to build a `XG-Boost` model. We will then deploy this model using Python `Flask` to allow for real-time prediction for the new customers. This will enable us to quickly and efficiently make predictions using the model in a live setting.
-<p align="center">
-<img width="400" alt="Screen Shot 2023-01-08 at 21 52 52" src="https://user-images.githubusercontent.com/89816441/211234068-2fd4f79a-8504-433d-a52e-992f12c9f505.png">  </p>
+
+<table><tr>
+<td><img width="450" alt="Screen Shot 2023-01-08 at 21 52 52" src="https://user-images.githubusercontent.com/89816441/211234068-2fd4f79a-8504-433d-a52e-992f12c9f505.png"> 
+<td><img width="400" alt="Screen Shot 2023-01-08 at 22 25 21" src="https://user-images.githubusercontent.com/89816441/211236430-2f42b17e-9a03-4181-afdf-f9d300b7d889.png">
+</tr></table>
 
 
 
