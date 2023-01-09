@@ -179,7 +179,7 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 
 ## Conclusion
-- XGBoost is a strong model that can outperform with Logistic Regression and Random Forest. To evaluate the model's performance, we should focus on the following metrics: recall, F1 score, PR AUC, and ROC AUC. This is particularly important because we place a strong emphasis on reducing false negatives. To determine the financial benefits of using XGBoost, we should consider the dollar value evaluation table and determine the threshold that is most suitable for the business needs of the bank. The top 5 features that have most impact on the model are:
+- `XGBoost` is a strong model that can outperform with `Logistic Regression` and `Random Forest`. To evaluate the model's performance, we should focus on the following metrics: `recall, F1 score, PR AUC, and ROC AUC`. This is particularly important because we place a strong emphasis on reducing false negatives. To determine the financial benefits of using `XGBoost`, we should consider the dollar value evaluation table and determine the threshold that is most suitable for the business needs of the bank. The top 5 features that have most impact on the model are:
   * `Total_Trans_Ct`
   * `Total_Trans_Amt`
   * `Total _Revolving_Bal`
