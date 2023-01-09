@@ -26,7 +26,7 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
 - [Modelling & Performance Evaluation](#model-performance-evaluation)
 - [Model Performance Improvement](#model-performance-improvement)
 - [Feature Importance](#feature-importance)
-- [Dollar value Evaluation](#dollar-value-evaluation)
+- [Dollar Value Evaluation](#dollar-value-evaluation)
 - [Deployment](#deployment)
 - [Conclusion](#conclusion)
 
