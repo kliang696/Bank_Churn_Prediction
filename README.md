@@ -2,6 +2,7 @@
 Bank churn, or the loss of customers to other financial institutions, is a significant problem for banks because it can lead to a decline in revenue and profitability.Building a prediction model can help identify at-risk customers and prevent churn by taking targeted interventions to improve the customer experience. Ultimately, building a prediction model to prevent churn can help improve customer loyalty, increase revenue, and reduce the financial impact of customer loss.
 
 [![web link](https://img.shields.io/badge/code_link-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/kliang696/Bank_Churn_Prediction/blob/main/bank_churn_prediction.ipynb)
+[![web link](https://img.shields.io/badge/slides_link-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/kliang696/Bank_Churn_Prediction/blob/main/slides.pdf)
 
 
 <img src="Plots/EDA/payroll-ge74d913c9_1920.jpg" width=700 height=400>
