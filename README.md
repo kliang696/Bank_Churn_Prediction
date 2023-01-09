@@ -160,15 +160,6 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 <p align="center">
 <img src="Plots/EDA/Shap.png"> </p>
 
-## Model Interpretation
-- The `SHAP` summary plot visualizes the importance of each feature in a model for predicting a specific outcome, with the x-axis representing the `SHAP` value and the y-axis ranking the features by importance. The color red indicates a higher value, while blue represents a lower value. From the plot, we can conclude the following insights:
-   * Lower values for `Total_Trans_Ct` associated with a higher likelihood of churn. Higher values for `Total_Trans_Ct` associated with a lower likelihood of churn
-   * Lower values for `Total _Revolving_Bal` associated with a higher likelihood of churn. Higher values for `Total _Revolving_Bal` associated with a lower likelihood of churn
-   * Lower values for `Total _Ct_Chng_04_Q1` associated with a higher likelihood of churn. Higher values for `Total _Ct_Chng_04_Q1` associated with a lower likelihood of churn
-   * Lower values for `Total_Relationship_Count` associated with a higher likelihood of churn. Higher values for `Total_Relationship_Count` associated with a lower likelihood of churn
-
-<p align="center">
-<img width="621" alt="Screen Shot 2023-01-08 at 21 03 55" src="https://user-images.githubusercontent.com/89816441/211230909-d7a3a0ab-1d8a-45af-979e-4ad9c07abbbe.png"> </p>
 
 ## Dollar Value Evaluation
 - This table illustrates the potential savings for the bank using different threshold levels for the model's churn prediction. The column ```dollar value 11``` represents a correct prediction, where the model accurately predicts that a customer will churn and how much money can be saved totally by retaining the customer. The column labeled ```dollar value 10``` represents the model fails to predict that a customer churn but they actually does churn, which resulting in a loss for the bank. The third column ```review counts``` represents the number of customers that the model predicts will churn at different levels. The cost of labor to review these possible churn cases varies based on the number of review counts, and the bank must decide which threshold level is the most suitable for the business.
@@ -189,6 +180,21 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 
 
 ## Conclusion
+- XGBoost is a strong model that can outperform with Logistic Regression and Random Forest. To evaluate the model's performance, we should focus on the following metrics: recall, F1 score, PR AUC, and ROC AUC. This is particularly important because we place a strong emphasis on reducing false negatives. To determine the financial benefits of using XGBoost, we should consider the dollar value evaluation table and determine the threshold that is most suitable for the business needs of the bank. The top 5 features that have most impact on the model are:
+  * `Total_Trans_Ct`
+  * `Total_Trans_Amt`
+  * `Total _Revolving_Bal`
+  * `Total _Ct_Chng_04_Q1`
+  * `Total_Relationship_Count`
+  
+- The `SHAP` summary plot visualizes the importance of each feature in a model for predicting a specific outcome, with the x-axis representing the `SHAP` value and the y-axis ranking the features by importance. The color red indicates a higher value, while blue represents a lower value. From the plot, we can conclude the following insights:
+   * Lower values for `Total_Trans_Ct` associated with a higher likelihood of churn. Higher values for `Total_Trans_Ct` associated with a lower likelihood of churn
+   * Lower values for `Total _Revolving_Bal` associated with a higher likelihood of churn. Higher values for `Total _Revolving_Bal` associated with a lower likelihood of churn
+   * Lower values for `Total _Ct_Chng_04_Q1` associated with a higher likelihood of churn. Higher values for `Total _Ct_Chng_04_Q1` associated with a lower likelihood of churn
+   * Lower values for `Total_Relationship_Count` associated with a higher likelihood of churn. Higher values for `Total_Relationship_Count` associated with a lower likelihood of churn
+
+<p align="center">
+<img width="621" alt="Screen Shot 2023-01-08 at 21 03 55" src="https://user-images.githubusercontent.com/89816441/211230909-d7a3a0ab-1d8a-45af-979e-4ad9c07abbbe.png"> </p>
 
 
 
