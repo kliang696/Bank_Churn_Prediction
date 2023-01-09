@@ -21,14 +21,13 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
 
 ## Project Structure
 
-- Exploratory Data Analysis
-- Feature Engineering
-- Modelling
-- Model Performance Evaluation
-- Hyper Parameter Tuning (Improve Model Performance)
-- Model Interpretation
-- Deployment
+- Exploratory Data Analysis & Feature Engineering
+- Modelling & Performance Evaluation
+- Model Performance Improvement(Hyper Parameter Tuning & Cross Validation)
+- Feature Importance
 - Dollar value Evaluation
+- Deployment
+- Conclusion
 
 
 
