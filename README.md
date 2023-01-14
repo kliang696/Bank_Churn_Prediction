@@ -130,14 +130,28 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
 </tr></table>
 
 ## Feature Importance
-- In this section, we used `SHAP` values to identify the most influential features in the model. We selected the top 5 features based on their `SHAP` values and included them in the model. This allowed us to evaluate the importance of each feature and determine which ones had the greatest impact on the model's performance. The top 5 features are:
+- In this section, we used `SHAP` feature importance plot on the left to identify the most influential features in the model. We selected the top 5 features based on their `SHAP` values and included them in the model. This allowed us to evaluate the importance of each feature and determine which ones had the greatest impact on the model's performance. The top 5 features are:
   * `Total_Trans_Ct`
   * `Total_Trans_Amt`
   * `Total _Revolving_Bal`
   * `Total _Ct_Chng_04_Q1`
   * `Total_Relationship_Count`
-<p align="center">
-<img src="Plots/EDA/Shap.png"> </p>
+
+
+
+- The `SHAP` summary plot on the right visualizes the importance of each feature in a model for predicting a specific outcome, with the x-axis representing the `SHAP` value and the y-axis ranking the features by importance. The color red indicates a higher value, while blue represents a lower value. From the plot, we can conclude the following insights:
+   * Lower values for `Total_Trans_Ct` associated with a higher likelihood of churn. Higher values for `Total_Trans_Ct` associated with a lower likelihood of churn
+   * Lower values for `Total _Revolving_Bal` associated with a higher likelihood of churn. Higher values for `Total _Revolving_Bal` associated with a lower likelihood of churn
+   * Lower values for `Total _Ct_Chng_04_Q1` associated with a higher likelihood of churn. Higher values for `Total _Ct_Chng_04_Q1` associated with a lower likelihood of churn
+   * Lower values for `Total_Relationship_Count` associated with a higher likelihood of churn. Higher values for `Total_Relationship_Count` associated with a lower likelihood of churn
+
+
+
+
+<table><tr>
+<td><img src="Plots/EDA/Shap.png">
+<td><img width="700" alt="Screen Shot 2023-01-08 at 21 03 55" src="https://user-images.githubusercontent.com/89816441/211230909-d7a3a0ab-1d8a-45af-979e-4ad9c07abbbe.png">
+</tr></table>
 
 ## Business Impact: Dollar Values
 - This table illustrates the potential savings for the bank using different threshold levels for the model's churn prediction. The column ```dollar value 11``` represents a correct prediction, where the model accurately predicts that a customer will churn and how much money can be saved totally by retaining the customer. The column labeled ```dollar value 10``` represents the model fails to predict that a customer churn but they actually does churn, which resulting in a loss for the bank. The third column ```review counts``` represents the number of customers that the model predicts will churn at different levels. The cost of labor to review these possible churn cases varies based on the number of review counts, and the bank must decide which threshold level is the most suitable for the business.
@@ -160,11 +174,4 @@ Random over-sampling is a technique that is used to balance an imbalanced datase
   * `Total _Ct_Chng_04_Q1`
   * `Total_Relationship_Count`
   
-- The `SHAP` summary plot visualizes the importance of each feature in a model for predicting a specific outcome, with the x-axis representing the `SHAP` value and the y-axis ranking the features by importance. The color red indicates a higher value, while blue represents a lower value. From the plot, we can conclude the following insights:
-   * Lower values for `Total_Trans_Ct` associated with a higher likelihood of churn. Higher values for `Total_Trans_Ct` associated with a lower likelihood of churn
-   * Lower values for `Total _Revolving_Bal` associated with a higher likelihood of churn. Higher values for `Total _Revolving_Bal` associated with a lower likelihood of churn
-   * Lower values for `Total _Ct_Chng_04_Q1` associated with a higher likelihood of churn. Higher values for `Total _Ct_Chng_04_Q1` associated with a lower likelihood of churn
-   * Lower values for `Total_Relationship_Count` associated with a higher likelihood of churn. Higher values for `Total_Relationship_Count` associated with a lower likelihood of churn
 
-<p align="center">
-<img width="621" alt="Screen Shot 2023-01-08 at 21 03 55" src="https://user-images.githubusercontent.com/89816441/211230909-d7a3a0ab-1d8a-45af-979e-4ad9c07abbbe.png"> </p>
