@@ -33,9 +33,10 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
 1. __Target Labels__
     *   The target variable in this dataset is ```Attrition_Flag```, which indicates whether a customer has left (`1`) or stayed with the company (`0`). There are 8,500 existing customers and 1,627 customers who have left, or "attrited,". In addition, this dataset is imbalanced, with the churning rate of 16%. This can make it difficult for the model to accurately learn and predict the patterns in the data, as the minority class is underrepresented.
     
-    <p align="center">
-       <img src="Plots/EDA/Screen Shot 2022-12-22 at 23.08.37.png" width=500 height=150>
-   </p >
+   ```python
+   target = df["Attrition_Flag"]
+   target.value_counts().plot.pie(autopct='%.2f',figsize=(6, 5))
+   ```
        
     <p align="center">
       <img src="Plots/EDA/data balance.png" width=400 height=250> 
@@ -44,7 +45,13 @@ One notable aspect of this dataset is that it is slightly imbalanced, with only 
 
 2. __Missing Values__
      *   The frequency table indicates that there are no missing or null values in this dataset. This is beneficial for the model because missing or null values can introduce noise and bias into the data, which can negatively impact the model's performance. By having a complete and clean dataset, the model will be able to learn more accurately and make more reliable predictions
-        <img src="Plots/EDA/null.png" alt="From the frequncy table above, we didn't detect any null values in this dataset"> 
+    ```python
+   null_mask = df.isnull()
+   num_nulls = null_mask.sum()
+   print(num_nulls)
+   ```
+   <img width="1169" alt="Screen Shot 2023-01-15 at 21 13 25" src="https://user-images.githubusercontent.com/89816441/212584108-9f51f0a0-7e0a-4601-8a3f-293ad7ba9eaf.png">
+
 
 ----------
 3. __Catergorical Features__
